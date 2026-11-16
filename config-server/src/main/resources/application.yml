@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/llucascr/config-repo
+          default-label: main
+          clone-on-start: true
+          timeout: 10
